@@ -1,9 +1,10 @@
 name: Trae AutoCheckin Daily
 
 on:
-  # 定时签到留给 fork 后自行开启（取消下面两行注释即可）
-  # schedule:
-  #   - cron: '23 16 * * *'  # 北京时间 00:23
+  # 定时签到：北京时间 00:23（UTC 16:23）。脚本自带早窗逻辑，
+  # 建议避开 00:00~00:10 整点高峰，故取 23 分。
+  schedule:
+    - cron: '23 16 * * *'
   workflow_dispatch:
 
 concurrency:
